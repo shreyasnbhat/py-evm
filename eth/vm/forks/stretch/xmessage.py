@@ -2,18 +2,20 @@ from rlp.sedes import (
     big_endian_int,
     binary,
 )
+
 from eth.rlp.sedes import (
     address,
     hash32
 )
-
 from eth.rlp.xmessage import (
     BaseXMessage,
 )
 
+
 class StretchXMessage(BaseXMessage):
     def validate(self):
         assert False, "Yet to implement"
+
 
 class StretchXMessageReceived(StretchXMessage):
     fields = [
