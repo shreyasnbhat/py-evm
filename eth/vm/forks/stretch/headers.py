@@ -4,8 +4,7 @@ from eth.vm.forks.byzantium.headers import (
     compute_difficulty,
 )
 
-
-compute_stretch_difficulty = compute_difficulty(5000000)
+compute_stretch_difficulty: int = compute_difficulty(5000000)
 
 create_stretch_header_from_parent = create_header_from_parent(
     compute_stretch_difficulty

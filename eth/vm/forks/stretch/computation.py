@@ -13,13 +13,10 @@ from eth.vm.gas_meter import (
     GasMeter,
 )
 
-# JONATHAN: TODO
-from .opcodes import CONSTANTINOPLE_OPCODES
-
-CONSTANTINOPLE_PRECOMPILES = merge(
+STRETCH_PRECOMPILES = merge(
     BYZANTIUM_PRECOMPILES,
     {
-        # TODO: add new precompiles
+        # TODO: add new pre-compiles
     },
 )
 
@@ -29,9 +26,10 @@ class StretchComputation(ByzantiumComputation):
     A class for all execution computations in the ``Stretch`` fork.
     Inherits from :class:`~eth.vm.forks.byzantium.computation.ByzantiumComputation`
     """
+
     # Override
-    # JONATHAN: TODO opcodes = CONSTANTINOPLE_OPCODES
-    # JONATHAN: TODO _precompiles = CONSTANTINOPLE_PRECOMPILES
+    opcodes = STRETCH_OPCODES
+    _precompiles = STRETCH_PRECOMPILES
 
     def get_gas_meter(self) -> GasMeter:
         return GasMeter(
