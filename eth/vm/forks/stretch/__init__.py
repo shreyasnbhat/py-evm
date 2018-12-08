@@ -29,7 +29,7 @@ class StretchVM(ByzantiumVM):
         return base_block.copy(
             xmessages_received=xmessages_received,
             header=new_header.copy(
-                xmessages_received_root=tx_root_hash,
+                xmessage_received_root=tx_root_hash,
             ),
         )
 
@@ -44,6 +44,6 @@ class StretchVM(ByzantiumVM):
         return base_block.copy(
             xmessages_sent=xmessages_sent,
             header=new_header.copy(
-                xmessages_sent_root=tx_root_hash,
+                xmessage_sent_root=tx_root_hash,
             ),
         )
